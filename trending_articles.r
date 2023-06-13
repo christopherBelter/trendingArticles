@@ -24,4 +24,4 @@ relevant_articles_out <- relevant_articles_out[!grepl("The Conversation|clinical
 relevant_articles_out <- c(paste0("Trending Articles on NICHD topics: ", as.character(Sys.Date()), "\n"), "This list includes articles and preprints on topics of interest to NICHD that were published in the past 7 days and that were in the top 500 for almetric.com attention score over the past 7 days. These are not necessarily the most important articles on these topics published in the past 7 days, and their content is not necessarily accurate, so their inclusion in this list does not constitute endorsement.\n", relevant_articles_out)
 relevant_articles_out <- unique(relevant_articles_out)
 relevant_articles_out
-writeLines(relevant_articles_out, con = paste0("covid 19/nichd updates/trending_relevant_articles_", gsub("-", "_", as.character(Sys.Date())), ".txt"))
+writeLines(relevant_articles_out, con = paste0("trending_relevant_articles_", gsub("-", "_", as.character(Sys.Date())), ".txt"))
